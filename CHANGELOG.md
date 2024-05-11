@@ -1,4 +1,16 @@
 #
+## v0.0.10
+
+[compare changes](https://github.com/figureland/git/compare/v0.0.9...v0.0.10)
+
+### 🚀 Enhancements
+
+- Updated organisation and added more entrypoints ([3ca8756](https://github.com/figureland/git/commit/3ca8756))
+
+### ❤️ Contributors
+
+- Toby Milner-Gulland <toby@figure.land>
+
 ## v0.0.9
 
 [compare changes](https://github.com/figureland/git/compare/v0.0.8...v0.0.9)
