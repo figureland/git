@@ -1,6 +1,6 @@
 {
-  "name": "@figureland/base",
-  "version": "0.0.5",
+  "name": "@figureland/vite-plugin-git",
+  "version": "0.0.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
@@ -9,14 +9,9 @@
       "types": "./dist/index.d.ts",
       "require": "./dist/index.js",
       "import": "./dist/index.js"
-    },
-    "./entry": {
-      "types": "./dist/entry.d.ts",
-      "require": "./dist/entry.js",
-      "import": "./dist/entry.js"
     }
   },
-  "description": "Base template for Figure Typescript projects",
+  "description": "A tiny plugin that makes git information available in your Vite app",
   "scripts": {
     "build": "bun run scripts/build.ts",
     "dev": "bun --watch scripts/dev.ts",
@@ -39,15 +34,19 @@
     "husky": "^9.0.11",
     "prettier": "^3.2.5",
     "typescript": "^5.2.2",
-    "typescript-eslint": "^7.6.0"
+    "typescript-eslint": "^7.6.0",
+    "vite": "^5.2.11"
+  },
+  "peerDependencies": {
+    "vite": ">5.0.0"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/figureland/base.git"
+    "url": "git+https://github.com/figureland/vite-plugin-git.git"
   },
   "author": "Figure Systems",
   "bugs": {
-    "url": "https://github.com/figureland/base"
+    "url": "https://github.com/figureland/vite-plugin-git"
   },
-  "homepage": "https://github.com/figureland/base#readme"
+  "homepage": "https://github.com/figureland/vite-plugin-git#readme"
 }
