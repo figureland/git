@@ -9,6 +9,9 @@
       "types": "./dist/index.d.ts",
       "require": "./dist/index.js",
       "import": "./dist/index.js"
+    },
+    "./module": {
+      "types": "./module.d.ts"
     }
   },
   "description": "A tiny plugin that makes git information available in your Vite app",
