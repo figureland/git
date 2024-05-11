@@ -1,5 +1,5 @@
 import { inspect } from 'util'
-import { status } from './git'
+import { status } from '@figureland/git'
 
 const name = 'vite-plugin-git'
 const virtualModuleId = 'virtual:git'

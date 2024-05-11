@@ -12,7 +12,11 @@
     "noEmit": true,
     "outDir": "dist",
     "resolveJsonModule": true,
-    "types": ["./module.d.ts", "@types/node"]
+    "types": ["./module.d.ts", "@types/node"],
+    "baseUrl": ".",
+    "paths": {
+      "@figureland/git": ["./src/index.ts"]
+    }
   },
   "include": ["src/**/*"]
 }
