@@ -1,4 +1,16 @@
 #
+## v0.0.5
+
+[compare changes](https://github.com/figureland/vite-plugin-git/compare/v0.0.4...v0.0.5)
+
+### 🏡 Chore
+
+- Added export to package.json ([a0916d3](https://github.com/figureland/vite-plugin-git/commit/a0916d3))
+
+### ❤️ Contributors
+
+- Toby Milner-Gulland <toby@figure.land>
+
 ## v0.0.4
 
 [compare changes](https://github.com/figureland/vite-plugin-git/compare/v0.0.3...v0.0.4)
