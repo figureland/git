@@ -1,4 +1,22 @@
 #
+## v0.0.16
+
+[compare changes](https://github.com/figureland/git/compare/v0.0.15...v0.0.16)
+
+### 🚀 Enhancements
+
+- Added a couple more fields ([df7e24f](https://github.com/figureland/git/commit/df7e24f))
+
+### 📖 Documentation
+
+- Updated readme to be more useful ([5f1293b](https://github.com/figureland/git/commit/5f1293b))
+- Updated readme to be more useful ([94271ce](https://github.com/figureland/git/commit/94271ce))
+- Updated readme to include up to date types ([d693a3f](https://github.com/figureland/git/commit/d693a3f))
+
+### ❤️ Contributors
+
+- Toby Milner-Gulland <toby@figure.land>
+
 ## v0.0.15
 
 [compare changes](https://github.com/figureland/git/compare/v0.0.14...v0.0.15)
