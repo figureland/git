@@ -19,6 +19,7 @@ type GitInformation = {
   status: 'ok' | 'error'
   branch: string
   commit: string
+  commitShort: string
 }
 const gitState = state()
 
@@ -51,6 +52,7 @@ type GitInformation = {
   status: 'ok' | 'error'
   branch: string
   commit: string
+  commitShort: string
 }
 ```
 
