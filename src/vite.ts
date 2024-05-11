@@ -1,19 +1,15 @@
-import { getGitInfo } from './git'
+import { inspect } from 'util'
+import { status } from './git'
 
 const name = 'vite-plugin-git'
 const virtualModuleId = 'virtual:git'
 const resolvedVirtualModuleId = '\0' + virtualModuleId
 
-export const write = (info: GitInformation) => `
-export const git = {
-    status: "${info.status}",
-    branch: "${info.branch}",
-    commit: "${info.commit}"
-};
+export const write = (s: GitInformation) => `
+export const status = ${inspect(s)};
 `
 
 export const gitPlugin = () => {
-  const info = write(getGitInfo())
   return {
     name,
     resolveId: (id: string) => {
@@ -23,7 +19,7 @@ export const gitPlugin = () => {
     },
     load: (id: string) => {
       if (id === resolvedVirtualModuleId) {
-        return info
+        return write(status())
       }
     }
   }

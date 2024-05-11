@@ -1,12 +1,14 @@
 import { describe, it, expect } from 'bun:test'
-import { getGitInfo } from '../src/git'
+import { status } from '../src/git'
 
 describe('git', () => {
   it('returns git information', () => {
-    const res = getGitInfo()
+    const res = status()
     expect(res).toBeTruthy()
     expect(res.status).toBe('ok')
-    expect(res.branch).toBeDefined()
-    expect(res.commit).toBeDefined()
+    if (res.status === 'ok') {
+      expect(res.branch).toBeDefined()
+      expect(res.commit).toBeDefined()
+    }
   })
 })

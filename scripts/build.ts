@@ -1,9 +1,8 @@
 import dts from 'bun-plugin-dts'
 
 await Bun.build({
-  entrypoints: ['./src/index.ts', './src/git.ts', './src/vite.ts'],
+  entrypoints: ['./src/index.ts'],
   outdir: './dist',
-  minify: false,
-  plugins: [dts()],
-  external: ['child_process', 'vite']
+  format: 'esm',
+  target: 'node'
 })
