@@ -1,11 +1,11 @@
-This is a tiny module which does thing, which is getting the active branch name and commit hash from git, if available. It then makes it available
+A tiny collection of helpers for working with git and Typescript.
 
-## Usage
+## Vite plugin usage
 
 ### Add it to `vite.config.ts`
 
 ```ts
-import { gitPlugin } from '@figureland/vite-plugin-git'
+import { gitPlugin } from '@figureland/git/vite'
 
 export default {
   plugins: [gitPlugin()]
@@ -23,6 +23,12 @@ type GitInformation = {
   branch: string
   commit: string
 }
+```
+
+This might also be required in a declaration if you are using typescript.
+
+```ts
+/// <reference types="@figureland/git/module"/>
 ```
 
 ## Scripts

@@ -1,5 +1,5 @@
 {
-  "name": "@figureland/vite-plugin-git",
+  "name": "@figureland/git",
   "version": "0.0.9",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -12,9 +12,14 @@
     },
     "./module": {
       "types": "./module.d.ts"
+    },
+    "./vite": {
+      "types": "./dist/vite.d.ts",
+      "require": "./dist/vite.js",
+      "import": "./dist/vite.js"
     }
   },
-  "description": "A tiny plugin that makes git information available in your Vite app",
+  "description": "A tiny collection of git helpers",
   "scripts": {
     "build": "bun run scripts/build.ts",
     "dev": "bun --watch scripts/dev.ts",
@@ -47,11 +52,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/figureland/vite-plugin-git.git"
+    "url": "git+https://github.com/figureland/git.git"
   },
   "author": "Figure Systems",
   "bugs": {
-    "url": "https://github.com/figureland/vite-plugin-git"
+    "url": "https://github.com/figureland/git"
   },
-  "homepage": "https://github.com/figureland/vite-plugin-git#readme"
+  "homepage": "https://github.com/figureland/git#readme"
 }

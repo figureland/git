@@ -1,2 +1,2 @@
-import '../src'
+import '../src/vite'
 import './build'

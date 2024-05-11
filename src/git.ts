@@ -1,9 +1,6 @@
-import { execSync } from 'child_process'
+import { cmd } from './command'
 
-const git = (command: string) =>
-  execSync(`git ${command}`)
-    .toString('utf8')
-    .replace(/[\n\r\s]+$/, '')
+export const git = (command: string) => cmd('git', command)
 
 export const getGitInfo = (): GitInformation => {
   try {
