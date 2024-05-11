@@ -1,4 +1,16 @@
 #
+## v0.0.14
+
+[compare changes](https://github.com/figureland/git/compare/v0.0.13...v0.0.14)
+
+### 🩹 Fixes
+
+- State tests ([3c95030](https://github.com/figureland/git/commit/3c95030))
+
+### ❤️ Contributors
+
+- Toby Milner-Gulland <toby@figure.land>
+
 ## v0.0.13
 
 [compare changes](https://github.com/figureland/git/compare/v0.0.12...v0.0.13)
