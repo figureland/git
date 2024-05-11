@@ -6,9 +6,12 @@ describe('git', () => {
     const res = state()
     expect(res).toBeTruthy()
     expect(res.status).toBe('ok')
+    console.log(res)
     if (res.status === 'ok') {
       expect(res.branch).toBeDefined()
-      expect(res.commit).toBeDefined()
+      expect(res.commitHash).toBeDefined()
+      expect(res.commitHashShort).toBeDefined()
+      expect(res.timestamp).toBeDefined()
     }
   })
 })

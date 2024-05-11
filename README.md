@@ -20,6 +20,8 @@ type GitInformation = {
   branch: string
   commit: string
   commitShort: string
+  timestamp: string
+  message: string
 }
 const gitState = state()
 
@@ -47,13 +49,7 @@ export default {
 ```ts
 import { gitState } from 'virtual:git'
 
-// gitState is the following:
-type GitInformation = {
-  status: 'ok' | 'error'
-  branch: string
-  commit: string
-  commitShort: string
-}
+// gitState is a snapshot based on GitInformation (see above)
 ```
 
 This might also be required in a declaration if you are using typescript.
