@@ -1,4 +1,16 @@
 #
+## v0.0.15
+
+[compare changes](https://github.com/figureland/git/compare/v0.0.14...v0.0.15)
+
+### 🚀 Enhancements
+
+- Updating virtual export name ([d8d107a](https://github.com/figureland/git/commit/d8d107a))
+
+### ❤️ Contributors
+
+- Toby Milner-Gulland <toby@figure.land>
+
 ## v0.0.14
 
 [compare changes](https://github.com/figureland/git/compare/v0.0.13...v0.0.14)
