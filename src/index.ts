@@ -1,5 +1,6 @@
 import { write } from './write'
 import { getGitInfo } from './git'
+import '../module'
 
 export type { GitInformation } from './api'
 

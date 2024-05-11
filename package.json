@@ -22,7 +22,8 @@
     "release": "bunx changelogen@latest --release"
   },
   "files": [
-    "dist"
+    "dist",
+    "module.d.ts"
   ],
   "license": "MIT",
   "devDependencies": {
