@@ -1,4 +1,16 @@
 #
+## v0.0.12
+
+[compare changes](https://github.com/figureland/git/compare/v0.0.11...v0.0.12)
+
+### 🚀 Enhancements
+
+- Changes to internal organisation, updating test ([5ddb495](https://github.com/figureland/git/commit/5ddb495))
+
+### ❤️ Contributors
+
+- Toby Milner-Gulland <toby@figure.land>
+
 ## v0.0.11
 
 [compare changes](https://github.com/figureland/git/compare/v0.0.10...v0.0.11)
