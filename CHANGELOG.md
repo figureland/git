@@ -1,4 +1,16 @@
 #
+## v0.0.7
+
+[compare changes](https://github.com/figureland/vite-plugin-git/compare/v0.0.6...v0.0.7)
+
+### 🩹 Fixes
+
+- Fixed write.ts ([d3299a3](https://github.com/figureland/vite-plugin-git/commit/d3299a3))
+
+### ❤️ Contributors
+
+- Toby Milner-Gulland <toby@figure.land>
+
 ## v0.0.6
 
 [compare changes](https://github.com/figureland/vite-plugin-git/compare/v0.0.5...v0.0.6)
