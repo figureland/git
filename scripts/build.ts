@@ -4,5 +4,6 @@ await Bun.build({
   entrypoints: ['./src/index.ts'],
   outdir: './dist',
   minify: false,
-  plugins: [dts()]
+  plugins: [dts()],
+  external: ['child_process']
 })

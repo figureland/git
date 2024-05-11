@@ -1,8 +1,7 @@
-/// <reference types="node" />
-import { execSync } from 'node:child_process'
+import { execSync } from 'child_process'
 
 const git = (command: string) =>
-  execSync(command)
+  execSync(`git ${command}`)
     .toString('utf8')
     .replace(/[\n\r\s]+$/, '')
 
@@ -13,8 +12,8 @@ export const getGitInfo = (): GitInformation => {
     }
     const result: GitInformation = {
       status: 'ok',
-      branch: git('git rev-parse --abbrev-ref HEAD'),
-      commit: git('git rev-parse HEAD')
+      branch: git('rev-parse --abbrev-ref HEAD'),
+      commit: git('rev-parse HEAD')
     }
     return result
   } catch {
@@ -28,7 +27,7 @@ export const getGitInfo = (): GitInformation => {
 
 export const isGitAvailable = () => {
   try {
-    execSync('git --version')
+    git('--version')
     return true
   } catch {
     return false
