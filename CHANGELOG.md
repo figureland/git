@@ -1,4 +1,16 @@
 #
+## v0.0.9
+
+[compare changes](https://github.com/figureland/vite-plugin-git/compare/v0.0.8...v0.0.9)
+
+### 🏡 Chore
+
+- Tried to fix child_process export ([c8d3e6e](https://github.com/figureland/vite-plugin-git/commit/c8d3e6e))
+
+### ❤️ Contributors
+
+- Toby Milner-Gulland <toby@figure.land>
+
 ## v0.0.8
 
 [compare changes](https://github.com/figureland/vite-plugin-git/compare/v0.0.7...v0.0.8)
