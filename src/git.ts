@@ -1,5 +1,5 @@
+/// <reference types="node" />
 import { execSync } from 'node:child_process'
-import type { GitInformation } from './api'
 
 const executeGitCommand = (command: string) =>
   execSync(command)

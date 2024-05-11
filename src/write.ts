@@ -1,4 +1,3 @@
-import type { GitInformation } from './api'
 export const write = (info: GitInformation) => `
 export const git = {
     status: ${info.status},
