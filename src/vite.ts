@@ -1,12 +1,12 @@
 import { inspect } from 'util'
-import { status } from '@figureland/git'
+import { state } from '@figureland/git'
 
 const name = 'vite-plugin-git'
 const virtualModuleId = 'virtual:git'
 const resolvedVirtualModuleId = '\0' + virtualModuleId
 
 export const write = (s: GitInformation) => `
-export const status = ${inspect(s)};
+export const state = ${inspect(s)};
 `
 
 export const gitPlugin = () => {
@@ -19,7 +19,7 @@ export const gitPlugin = () => {
     },
     load: (id: string) => {
       if (id === resolvedVirtualModuleId) {
-        return write(status())
+        return write(state())
       }
     }
   }

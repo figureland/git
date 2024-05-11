@@ -1,9 +1,9 @@
 import { describe, it, expect } from 'bun:test'
-import { status } from '../src/git'
+import { state } from '../src/git'
 
 describe('git', () => {
   it('returns git information', () => {
-    const res = status()
+    const res = state()
     expect(res).toBeTruthy()
     expect(res.status).toBe('ok')
     if (res.status === 'ok') {

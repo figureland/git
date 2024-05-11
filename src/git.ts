@@ -2,7 +2,7 @@ import { cmd } from './command'
 
 export const git = (command: string) => cmd('git', command)
 
-export const status = (): GitInformation => {
+export const state = (): GitInformation => {
   try {
     if (!isGitAvailable()) {
       throw new Error()

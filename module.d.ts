@@ -10,6 +10,6 @@ declare type GitInformation =
     }
 
 declare module 'virtual:git' {
-  const git: GitInformation
-  export const git
+  const state: GitInformation
+  export const state
 }
