@@ -5,8 +5,10 @@ const name = 'vite-plugin-git'
 const virtualModuleId = 'virtual:git'
 const resolvedVirtualModuleId = '\0' + virtualModuleId
 
+export const exportName = 'gitState'
+
 export const write = (s: GitInformation) => `
-export const state = ${inspect(s)};
+export const ${exportName} = ${inspect(s)};
 `
 
 export const gitPlugin = () => {
