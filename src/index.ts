@@ -1,4 +1,3 @@
-import type { Plugin } from 'vite'
 import { write } from './write'
 import { getGitInfo } from './git'
 
@@ -7,15 +6,15 @@ export type { GitInformation } from './api'
 const virtualModuleId = 'virtual:git'
 const resolvedVirtualModuleId = '\0' + virtualModuleId
 
-export const gitPlugin = (): Plugin => {
+export const gitPlugin = () => {
   return {
     name: 'vite-plugin-git',
-    resolveId: (id) => {
+    resolveId: (id: string) => {
       if (id === virtualModuleId) {
         return resolvedVirtualModuleId
       }
     },
-    load: (id) => {
+    load: (id: string) => {
       if (id === resolvedVirtualModuleId) {
         return write(getGitInfo())
       }
