@@ -1,4 +1,16 @@
 #
+## v0.0.8
+
+[compare changes](https://github.com/figureland/vite-plugin-git/compare/v0.0.7...v0.0.8)
+
+### 🚀 Enhancements
+
+- Made it one off git info generation ([908cc0a](https://github.com/figureland/vite-plugin-git/commit/908cc0a))
+
+### ❤️ Contributors
+
+- Toby Milner-Gulland <toby@figure.land>
+
 ## v0.0.7
 
 [compare changes](https://github.com/figureland/vite-plugin-git/compare/v0.0.6...v0.0.7)
