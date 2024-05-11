@@ -1,4 +1,16 @@
 #
+## v0.0.6
+
+[compare changes](https://github.com/figureland/vite-plugin-git/compare/v0.0.5...v0.0.6)
+
+### 🏡 Chore
+
+- Fixed typing, export and module.d.ts ([4cd245f](https://github.com/figureland/vite-plugin-git/commit/4cd245f))
+
+### ❤️ Contributors
+
+- Toby Milner-Gulland <toby@figure.land>
+
 ## v0.0.5
 
 [compare changes](https://github.com/figureland/vite-plugin-git/compare/v0.0.4...v0.0.5)
