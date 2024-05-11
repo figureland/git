@@ -1,7 +1,7 @@
 export const write = (info: GitInformation) => `
 export const git = {
-    status: ${info.status},
+    status: "${info.status}",
     branch: "${info.branch}",
-    commit: "${info.commit}",
-} as const
+    commit: "${info.commit}"
+};
 `
