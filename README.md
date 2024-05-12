@@ -4,17 +4,22 @@ It's so basic it probably doesn't need to be a library of its own. But I found m
 
 ## Basic usage
 
-This library exports three little functions:
+The node.js/bun side of this library exports three little functions. These will fail if you try to use them in the browser, because they depend on access to the filesystem and git in the command line.
 
 ```ts
-import { git, state, isGitAvailable } from '@figureland/git'
+import { git, state, isGitAvailable, commands } from '@figureland/git'
 
-// 1. A very basic wrapper that is essentially just a way of
-// calling 'git <command>' programmatically
-const branchName = git('rev-parse --abbrev-ref HEAD')
+// 1. A very basic wrapper that is essentially just a way
+// of calling 'git <command>' programmatically
+const branchName: string = git('rev-parse --abbrev-ref HEAD')
 
-// 2. Just returns an object containing three props about the
-// current state of git in the current working directory
+// There are a few preset commands if, like me, you are constantly
+// forgetting git commands.
+
+const branchName: string = git(commands.branchName) // same as above
+
+// 2. state() returns an object representing the current
+// state of git in the current working directory
 type GitInformation = {
   status: 'ok' | 'error'
   branch: string
@@ -25,9 +30,9 @@ type GitInformation = {
 }
 const gitState = state()
 
-// 3. Presume this one is self-explanatory
+// 3. This one is hopefully self-explanatory
 
-const available = isGitAvailable()
+const available: boolean = isGitAvailable()
 ```
 
 ## Vite plugin
