@@ -18,8 +18,8 @@ const branchName = git('rev-parse --abbrev-ref HEAD')
 type GitInformation = {
   status: 'ok' | 'error'
   branch: string
-  commit: string
-  commitShort: string
+  commitHash: string
+  commitHashShort: string
   timestamp: string
   message: string
 }
