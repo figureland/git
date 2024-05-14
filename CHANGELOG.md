@@ -1,4 +1,21 @@
 #
+## v0.0.18
+
+[compare changes](https://github.com/figureland/git/compare/v0.0.17...v0.0.18)
+
+### 🚀 Enhancements
+
+- Added url feature ([0293385](https://github.com/figureland/git/commit/0293385))
+
+### 📖 Documentation
+
+- Update type ([8614b76](https://github.com/figureland/git/commit/8614b76))
+- Update type ([e414b82](https://github.com/figureland/git/commit/e414b82))
+
+### ❤️ Contributors
+
+- Toby Milner-Gulland <toby@figure.land>
+
 ## v0.0.17
 
 [compare changes](https://github.com/figureland/git/compare/v0.0.16...v0.0.17)
