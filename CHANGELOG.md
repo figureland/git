@@ -1,4 +1,16 @@
 #
+## v0.0.19
+
+[compare changes](https://github.com/figureland/git/compare/v0.0.18...v0.0.19)
+
+### 🚀 Enhancements
+
+- Updated git url ([818f82b](https://github.com/figureland/git/commit/818f82b))
+
+### ❤️ Contributors
+
+- Toby Milner-Gulland <toby@figure.land>
+
 ## v0.0.18
 
 [compare changes](https://github.com/figureland/git/compare/v0.0.17...v0.0.18)
