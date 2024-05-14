@@ -6,7 +6,10 @@ declare type GitInformation =
       branch: string
       timestamp: string
       message: string
-      url?: string
+      url?: {
+        remote: string
+        commit: string
+      }
     }
   | {
       status: 'error'

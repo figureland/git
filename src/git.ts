@@ -30,7 +30,7 @@ export const state = (): GitInformation => {
     if (!isGitAvailable()) {
       throw new Error()
     }
-    const url = parseURL(git(commands.url))
+    const remote = parseURL(git(commands.url))
 
     const result: GitInformation = {
       status: 'ok',
@@ -39,9 +39,11 @@ export const state = (): GitInformation => {
       commitHash: git(commands.commitHash),
       timestamp: git(commands.timestamp),
       message: git(commands.message),
-      ...(url && {
-        url,
-        githubCommit: `${url}/commit/${git(commands.commitHash)}`
+      ...(remote && {
+        url: {
+          remote,
+          commit: `${remote}/commit/${git(commands.commitHash)}`
+        }
       })
     }
     return result
