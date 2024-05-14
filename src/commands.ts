@@ -1,0 +1,6 @@
+export const branchName = 'rev-parse --abbrev-ref HEAD'
+export const commitHashShort = 'rev-parse --short HEAD'
+export const commitHash = 'rev-parse HEAD'
+export const timestamp = 'log -1 --format=%ct'
+export const message = 'log -1 --pretty=%B'
+export const url = 'config --get remote.origin.url'

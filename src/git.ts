@@ -1,30 +1,52 @@
-import { cmd } from './command'
+import { cli } from './cli'
+import * as commands from './commands'
 
-export const commands = {
-  branchName: 'rev-parse --abbrev-ref HEAD',
-  commitHashShort: 'rev-parse --short HEAD',
-  commitHash: 'rev-parse HEAD',
-  timestamp: `--no-pager log -1 --pretty='format:%cd' --date='format:%Y-%m-%d %H:%M:%S'`,
-  message: 'log -1 --pretty=%B'
+export const parseURL = (gitUrl: string): string | null => {
+  const sshPrefix = 'git@'
+  const httpsPrefix = 'https://'
+  const sshDomainSuffix = ':'
+
+  if (gitUrl.startsWith(sshPrefix) && gitUrl.includes(sshDomainSuffix)) {
+    try {
+      const withoutPrefix = gitUrl.substring(sshPrefix.length)
+      const colonIndex = withoutPrefix.indexOf(sshDomainSuffix)
+      const domain = withoutPrefix.substring(0, colonIndex)
+      const path = withoutPrefix.substring(colonIndex + 1).replace(/\.git$/, '') // Remove .git suffix
+
+      const url = new URL(`${httpsPrefix}${domain}/${path}`)
+      return url.href
+    } catch {
+      return null
+    }
+  } else {
+    return null
+  }
 }
 
-export const git = (command: string) => cmd('git', command)
+export const git = (command: string) => cli('git', command)
 
 export const state = (): GitInformation => {
   try {
     if (!isGitAvailable()) {
       throw new Error()
     }
+    const url = parseURL(git(commands.url))
+
     const result: GitInformation = {
       status: 'ok',
       branch: git(commands.branchName),
       commitHashShort: git(commands.commitHashShort),
       commitHash: git(commands.commitHash),
       timestamp: git(commands.timestamp),
-      message: git(commands.message)
+      message: git(commands.message),
+      ...(url && {
+        url,
+        githubCommit: `${url}/commit/${git(commands.commitHash)}`
+      })
     }
     return result
-  } catch {
+  } catch (e) {
+    console.log(e)
     return {
       status: 'error'
     }
